@@ -1,0 +1,11 @@
+{
+    "editor.hover.delay": 200,
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 0,
+    "editor.rulers": [
+        80
+    ],
+    "workbench.colorTheme": "Monokai",
+    "editor.fontSize": 11,
+    "editor.renderWhitespace": "all"
+}
