@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/lem_in.h"
+#include "../inc/ft_ssl.h"
 
 void		*ft_memalloc_c(size_t size, int c)
 {

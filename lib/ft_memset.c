@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/lem_in.h"
+#include "../inc/ft_ssl.h"
 
 void				*ft_memset(void *s, int c, size_t n)
 {

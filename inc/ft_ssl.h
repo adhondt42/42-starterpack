@@ -6,17 +6,19 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 13:07:31 by adhondt           #+#    #+#             */
-/*   Updated: 2018/06/14 13:25:19 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/08/20 16:01:37 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LEM_IN_H
-# define LEM_IN_H
+#ifndef FT_SSL_H
+# define FT_SSL_H
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
+# define BUFF_SIZE 8
 
-
+char			*ft_strsub(char const *s, unsigned int start, size_t len);
+char			*ft_strchr(const char *s, int c);
 char			*ft_strcat(char *dest, const char *src);
 void			*ft_memset(void *s, int c, size_t n);
 char			*ft_chardup(char c);

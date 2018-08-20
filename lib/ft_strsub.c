@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: avallois <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 21:24:21 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:24:22 by adhondt          ###   ########.fr       */
+/*   Created: 2018/06/13 21:52:24 by avallois          #+#    #+#             */
+/*   Updated: 2018/06/14 15:20:35 by avallois         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_ssl.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int i;
+	char	*tronc;
+	int		i;
 
 	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
+	if (s == NULL)
+		return (NULL);
+	if ((tronc = (char *)malloc(sizeof(char) * (len + 1))) == NULL)
+		return (NULL);
+	while (len--)
+	{
+		tronc[i] = s[start + i];
 		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	tronc[i] = '\0';
+	return (tronc);
 }

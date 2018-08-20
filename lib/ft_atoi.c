@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/lem_in.h"
+#include "../inc/ft_ssl.h"
 
 int	ft_atoi(const char *str)
 {

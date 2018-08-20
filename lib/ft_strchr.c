@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: avallois <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 21:24:21 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/22 21:24:22 by adhondt          ###   ########.fr       */
+/*   Created: 2018/06/13 21:50:45 by avallois          #+#    #+#             */
+/*   Updated: 2018/06/14 15:20:15 by avallois         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_ssl.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	char	*cs;
 
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	if (!s)
+		return (NULL);
+	cs = (char *)s;
+	while (*cs != c && *cs)
+		cs++;
+	if (*cs == c)
+		return (cs);
+	return (NULL);
 }
