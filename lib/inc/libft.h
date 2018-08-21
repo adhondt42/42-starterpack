@@ -45,4 +45,3 @@ int				ft_isnumber(char *str);
 int				pos_str_tab(char *haystack, char **needle);
 
 #endif
- 
