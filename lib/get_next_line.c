@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_ssl.h"
+#include "libft.h"
 
 char			*ft_keepstr(char *str, char *instr)
 {

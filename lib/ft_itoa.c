@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_ssl.h"
+#include "libft.h"
 
 static void	itoa_negatif(int *n, int *negatif, int *len)
 {

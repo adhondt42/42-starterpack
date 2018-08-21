@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   copy_inttab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 20:10:54 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/12 10:51:20 by adhondt          ###   ########.fr       */
+/*   Created: 2018/06/20 13:06:08 by adhondt           #+#    #+#             */
+/*   Updated: 2018/06/20 13:06:15 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+int		pos_str_tab(char *haystack, char **needle)
 {
-	if (n == -2147483648)
+	int	i;
+
+	i = 0;
+	while (needle[i])
 	{
-		ft_putstr("-2147483648");
-		return ;
+		if (ft_strcmp(haystack, needle[i]) == 0)
+			return (i);
+		i++;
 	}
-	if (n > 2147483647 || n < -2147483648)
-		return ;
-	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n / 10)
-		ft_putnbr(n / 10);
-	ft_putchar(n % 10 + '0');
+	return (-1);
 }

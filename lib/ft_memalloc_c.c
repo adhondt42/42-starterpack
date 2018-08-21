@@ -10,15 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_ssl.h"
+#include "libft.h"
 
-void		*ft_memalloc_c(size_t size, int c)
+unsigned char	*ft_memalloc_c(size_t size, char c)
 {
-	char	*str;
-	size_t	i;
+	unsigned char	*str;
+	size_t			i;
 
 	i = 0;
-	str = (char *)malloc(sizeof(char) * (size + 1));
+	if (!(str = (unsigned char *)malloc(sizeof(unsigned char) * (size + 1))))
+		return (NULL);
 	while (i != size)
 		str[i++] = c;
 	str[size] = '\0';

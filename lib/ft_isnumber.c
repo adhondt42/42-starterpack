@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_onlydigit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 20:10:54 by adhondt           #+#    #+#             */
-/*   Updated: 2018/04/12 10:51:20 by adhondt          ###   ########.fr       */
+/*   Created: 2018/06/19 15:03:12 by adhondt           #+#    #+#             */
+/*   Updated: 2018/07/19 18:24:44 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+int		ft_isnumber(char *str)
 {
-	if (n == -2147483648)
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putstr("-2147483648");
-		return ;
+		if ((!ft_isdigit(str[i])) && !(i == 0 && str[i] == '-'))
+			return (0);
+		i++;
 	}
-	if (n > 2147483647 || n < -2147483648)
-		return ;
-	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n / 10)
-		ft_putnbr(n / 10);
-	ft_putchar(n % 10 + '0');
+	return (1);
 }
