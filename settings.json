@@ -8,4 +8,6 @@
     "workbench.colorTheme": "Monokai",
     "editor.fontSize": 11,
     "editor.renderWhitespace": "all"
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
 }
