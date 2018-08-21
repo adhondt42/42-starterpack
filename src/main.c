@@ -6,12 +6,14 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 15:56:57 by adhondt           #+#    #+#             */
-/*   Updated: 2018/08/20 16:02:03 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/08/21 15:53:11 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_ssl.h"
 
-int	main()
+int	main(int argc, char **argv)
 {
+	(void)argv;
+	(void)argc;
 }
